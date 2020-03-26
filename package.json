@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
+    "vue-cropper": "^0.5.2",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"
   },
@@ -43,10 +44,34 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "comma-dangle": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false, "singleQuote": true,
+    "semi": false,
+    "trailingComma": "none"
+  }
 }
